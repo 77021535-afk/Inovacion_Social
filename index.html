@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Conciencia Ambiental | Reciclaje y Sostenibilidad</title>
-  <!-- Google Fonts + Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <title>Planeta Vivo | Reciclaje y Conciencia Ambiental</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -15,149 +14,128 @@
     }
 
     body {
-      background: linear-gradient(145deg, #eaf7e6 0%, #d0e5ca 100%);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: #1c2e1a;
-      scroll-behavior: smooth;
+      background: linear-gradient(145deg, #e9f5e5 0%, #cde5c7 100%);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #1a2e17;
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 2rem 1.5rem 3rem;
+      padding: 2rem 2rem 3rem;
     }
 
-    /* Header */
+    /* Hero mejorado */
     .hero {
       text-align: center;
       margin-bottom: 2.5rem;
+      position: relative;
     }
-
     .hero-badge {
-      background: #2e7d32cc;
+      background: #2e7d32dd;
       backdrop-filter: blur(6px);
       display: inline-block;
-      padding: 0.3rem 1rem;
+      padding: 0.3rem 1.2rem;
       border-radius: 100px;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
       color: white;
       letter-spacing: 1px;
       margin-bottom: 1rem;
     }
-
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       background: linear-gradient(135deg, #1b5e1f, #4caf50, #2b7a2e);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 0.8rem;
-      letter-spacing: -0.02em;
     }
-
     .hero .tagline {
-      font-size: 1.1rem;
-      color: #2d4a29;
-      max-width: 650px;
-      margin: 0 auto;
-      background: rgba(255, 255, 245, 0.7);
-      backdrop-filter: blur(4px);
-      padding: 0.5rem 1.2rem;
-      border-radius: 80px;
+      font-size: 1.15rem;
+      background: rgba(255,255,240,0.75);
+      backdrop-filter: blur(5px);
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border-radius: 60px;
       font-weight: 500;
     }
-
-    .divider-leaf {
-      width: 80px;
+    .divider {
+      width: 70px;
       height: 3px;
       background: #6fbf6c;
-      margin: 1.2rem auto 0;
+      margin: 1rem auto;
       border-radius: 4px;
     }
 
-    /* Pestañas estilo moderno */
-    .tabs-container {
-      margin: 2rem 0 2rem;
-    }
-
+    /* Pestañas */
     .tabs {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.8rem;
-      border-bottom: 2px solid #c8e0c2;
-      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #c0ddb8;
+      padding-bottom: 0.6rem;
     }
-
     .tab-btn {
       background: transparent;
       border: none;
-      padding: 0.8rem 1.8rem;
+      padding: 0.75rem 2rem;
       font-size: 1rem;
       font-weight: 600;
       border-radius: 60px;
       cursor: pointer;
-      transition: all 0.25s ease;
-      color: #3d5e3a;
+      transition: 0.25s;
+      color: #2d5a29;
       font-family: inherit;
       display: inline-flex;
       align-items: center;
       gap: 10px;
     }
-
-    .tab-btn i {
-      font-size: 1.1rem;
-    }
-
+    .tab-btn i { font-size: 1.1rem; }
     .tab-btn.active {
       background: #2e7d32;
       color: white;
-      box-shadow: 0 6px 14px rgba(46, 125, 50, 0.3);
+      box-shadow: 0 8px 18px rgba(46,125,50,0.3);
     }
-
     .tab-btn:hover:not(.active) {
-      background: #d4e8d0;
+      background: #d0e8ca;
       transform: translateY(-2px);
     }
 
-    /* Contenido de pestañas */
+    /* contenido */
     .tab-content {
       display: none;
       animation: fadeIn 0.3s ease;
     }
+    .tab-content.active-content { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-    .tab-content.active-content {
-      display: block;
+    /* Grid y tarjetas */
+    .grid-2cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+      margin: 1.5rem 0;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Tarjetas de información */
     .info-card {
-      background: rgba(255, 255, 250, 0.9);
+      background: rgba(255, 255, 250, 0.92);
+      backdrop-filter: blur(2px);
       border-radius: 1.8rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #daefd6;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
-      transition: transform 0.2s;
+      padding: 1.6rem;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+      transition: all 0.25s;
+      border: 1px solid #e2f0dd;
+      overflow: hidden;
     }
-
-    .info-card:hover {
-      transform: translateY(-3px);
-      background: white;
-    }
-
+    .info-card:hover { transform: translateY(-5px); background: white; }
     .card-icon {
       font-size: 2rem;
       background: #e8f5e9;
-      width: 55px;
-      height: 55px;
+      width: 56px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -165,236 +143,258 @@
       margin-bottom: 1rem;
       color: #2e7d32;
     }
-
-    .info-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.6rem;
-      color: #1b4d1a;
-    }
-
-    .info-card p, .info-card li {
-      color: #2d4a2a;
-      line-height: 1.5;
-      font-size: 0.95rem;
-    }
-
-    .grid-2cols {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .info-card h3 { font-size: 1.4rem; margin-bottom: 0.75rem; color: #1c4d19; }
     .stat-highlight {
-      background: #f1f9ef;
-      border-left: 5px solid #4caf50;
-      padding: 1rem 1.2rem;
+      background: #eef7ea;
+      border-left: 6px solid #4caf50;
+      padding: 1rem 1.4rem;
       border-radius: 1.2rem;
       margin: 1rem 0;
     }
+    .fact-list { list-style: none; padding-left: 0; }
+    .fact-list li { margin-bottom: 0.7rem; padding-left: 1.6rem; position: relative; }
+    .fact-list li:before { content: "🌿"; position: absolute; left: 0; color: #4caf50; }
 
-    .fact-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .fact-list li {
-      margin-bottom: 0.8rem;
-      padding-left: 1.6rem;
-      position: relative;
-    }
-    .fact-list li:before {
-      content: "🌱";
-      position: absolute;
-      left: 0;
-      color: #4caf50;
-    }
-
-    .badge-stats {
-      display: inline-block;
+    .badge-green {
       background: #2e7d32;
       color: white;
-      border-radius: 40px;
+      border-radius: 30px;
       padding: 0.2rem 0.8rem;
       font-size: 0.7rem;
-      font-weight: 600;
+      font-weight: 700;
+      display: inline-block;
       margin-right: 0.5rem;
     }
 
-    /* Sección Fabricación vacía pero elegante */
+    /* Tarjetas con imágenes integradas */
+    .img-card {
+      overflow: hidden;
+    }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .img-card:hover .card-img {
+      transform: scale(1.02);
+    }
+    .peru-card {
+      background: linear-gradient(125deg, #fcf9ec, #f5efe2);
+      border-left: 8px solid #e6b422;
+    }
+    .world-card {
+      background: linear-gradient(125deg, #edf4fc, #e2edf7);
+      border-left: 8px solid #2196f3;
+    }
+
+    /* vacío fabricación con imagen decorativa */
     .empty-fabricacion {
       text-align: center;
-      padding: 4rem 2rem;
-      background: rgba(255, 255, 245, 0.7);
+      padding: 3rem 2rem;
+      background: rgba(255, 253, 240, 0.9);
       border-radius: 2rem;
       border: 2px dashed #a5d6a7;
-      color: #6b8c69;
+      color: #698a66;
     }
-
-    .empty-fabricacion i {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
+    .empty-img {
+      max-width: 200px;
       opacity: 0.6;
+      margin-bottom: 1rem;
     }
-
     footer {
       margin-top: 3rem;
       text-align: center;
       font-size: 0.8rem;
-      color: #568a52;
-      border-top: 1px solid #bcddae;
+      color: #548450;
+      border-top: 1px solid #bddcad;
       padding-top: 2rem;
     }
-
-    @media (max-width: 680px) {
+    @media (max-width: 700px) {
+      .container { padding: 1rem; }
       .hero h1 { font-size: 2rem; }
       .tab-btn { padding: 0.5rem 1.2rem; font-size: 0.85rem; }
-      .container { padding: 1.2rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
   <div class="hero">
-    <div class="hero-badge"><i class="fas fa-globe-americas"></i> #PorElPlaneta</div>
-    <h1>Reciclar es <span style="background:linear-gradient(135deg,#66bb6a,#2e7d32); background-clip:text; -webkit-background-clip:text; color:transparent;">reinventar</span></h1>
-    <div class="tagline"><i class="fas fa-leaf"></i> Hábitos · Realidades · Datos · Fabricación</div>
-    <div class="divider-leaf"></div>
+    <div class="hero-badge"><i class="fas fa-globe-americas"></i> #ReciclarEsVida</div>
+    <h1>Conciencia ambiental<br>para un futuro real</h1>
+    <div class="tagline"><i class="fas fa-leaf"></i> Hábitos · Realidades (Perú & Mundo) · Datos · Fabricación</div>
+    <div class="divider"></div>
   </div>
 
-  <!-- Pestañas -->
-  <div class="tabs-container">
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="habitos"><i class="fas fa-heartbeat"></i> Hábitos</button>
-      <button class="tab-btn" data-tab="realidades"><i class="fas fa-chart-line"></i> Realidades</button>
-      <button class="tab-btn" data-tab="datos"><i class="fas fa-lightbulb"></i> Datos interesantes</button>
-      <button class="tab-btn" data-tab="fabricacion"><i class="fas fa-industry"></i> Fabricación</button>
-    </div>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="habitos"><i class="fas fa-heartbeat"></i> Hábitos</button>
+    <button class="tab-btn" data-tab="realidades"><i class="fas fa-chart-line"></i> Realidades</button>
+    <button class="tab-btn" data-tab="datos"><i class="fas fa-lightbulb"></i> Datos interesantes</button>
+    <button class="tab-btn" data-tab="fabricacion"><i class="fas fa-industry"></i> Fabricación</button>
   </div>
 
-  <!-- Contenido: HÁBITOS -->
+  <!-- ================= HÁBITOS CON IMÁGENES ================= -->
   <div id="habitos" class="tab-content active-content">
     <div class="grid-2cols">
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/113395/pexels-photo-113395.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Separación de residuos en casa" loading="lazy">
         <div class="card-icon"><i class="fas fa-separator"></i></div>
-        <h3>Separa desde casa</h3>
-        <p>Coloca diferentes cestos: uno para envases (plástico, latas, bricks), otro para papel y cartón, otro para vidrio y uno para residuos orgánicos. Esta simple acción multiplica las tasas de reciclaje [citation:3].</p>
+        <h3>Separa en casa</h3>
+        <p>Usa 3 o 4 contenedores: plástico/latas, papel/cartón, vidrio y orgánico. Esta acción multiplica el reciclaje y evita contaminación cruzada.</p>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4956482/pexels-photo-4956482.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavando envases" loading="lazy">
         <div class="card-icon"><i class="fas fa-hand-sparkles"></i></div>
-        <h3>Limpia tus envases</h3>
-        <p>Antes de reciclar, enjuaga latas, botellas y briks. Eliminar restos de comida evita contaminar todo el lote y facilita el proceso industrial [citation:2].</p>
+        <h3>Envases limpios</h3>
+        <p>Enjuaga latas, botellas y briks. Sin restos de comida, el proceso de reciclaje es más eficiente y de mayor calidad.</p>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/2811090/pexels-photo-2811090.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Reutilización de frascos" loading="lazy">
         <div class="card-icon"><i class="fas fa-box-open"></i></div>
-        <h3>Reduce y reutiliza primero</h3>
-        <p>Las 3R empiezan por <strong>Reducir</strong> y <strong>Reutilizar</strong>. Elige productos a granel, bolsas de tela y envases retornables. Solo después, recicla lo que no puedas evitar [citation:7].</p>
+        <h3>Reduce y reutiliza</h3>
+        <p>Aplica las 3R: Reduce consumo, Reutiliza envases y sólo después Recicla. Prefiere productos a granel y bolsas de tela.</p>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4483777/pexels-photo-4483777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Compostaje casero" loading="lazy">
         <div class="card-icon"><i class="fas fa-leaf"></i></div>
-        <h3>Compostaje de residuos orgánicos</h3>
-        <p>Más del 45% de nuestra basura es materia orgánica [citation:9]. Compostar restos de fruta, verdura y café reduce la emisión de metano en vertederos y genera abono natural. En 2025, Miraflores produjo 23 toneladas de compost gracias a esta práctica [citation:10].</p>
+        <h3>Compostaje urbano</h3>
+        <p>El 45% de la basura es orgánica. Compostar restos evita metano en vertederos y genera abono natural para jardines.</p>
+      </div>
+    </div>
+    <div class="stat-highlight"><i class="fas fa-recycle"></i> <strong>Hábito clave:</strong> Conoce los colores de tu municipio (azul: papel; amarillo: plásticos/metales; verde: vidrio; marrón: orgánico). ¡Cada pequeño gesto suma!</div>
+  </div>
+
+  <!-- ================= REALIDADES (PERÚ + MUNDO) CON IMÁGENES ================= -->
+  <div id="realidades" class="tab-content">
+    <!-- Sección Perú con imagen destacada -->
+    <div class="info-card peru-card img-card">
+      <img class="card-img" src="https://images.pexels.com/photos/5964792/pexels-photo-5964792.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contaminación en playas de Perú" loading="lazy">
+      <div class="card-icon" style="background:#f9eec1;"><i class="fas fa-peru"></i></div>
+      <h3><i class="fas fa-flag-checkered"></i> Realidad en Perú: un desafío urgente</h3>
+      <p><strong>📍 Solo el 2% de los residuos plásticos se recicla en Perú</strong> (Ministerio del Ambiente, 2025). Cada año se generan más de 900 mil toneladas de plástico, pero la infraestructura de reciclaje es limitada.</p>
+      <ul class="fact-list">
+        <li>Más de 4 millones de peruanos viven en distritos sin acceso a recolección selectiva.</li>
+        <li><strong>Lima genera 10,000 toneladas diarias de basura</strong>, pero solo el 0,5% se recicla formalmente.</li>
+        <li>El 68% de residuos en Perú termina en vertederos o botaderos a cielo abierto, contaminando suelos y aguas.</li>
+        <li>Más de 2000 recicladores formalizados necesitan apoyo y reconocimiento.</li>
+      </ul>
+    </div>
+
+    <div class="grid-2cols">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/1593098/pexels-photo-1593098.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plásticos en ríos" loading="lazy">
+        <div class="card-icon"><i class="fas fa-water"></i></div>
+        <h3>Plásticos en ríos y playas peruanas</h3>
+        <p>El <strong>87% de la basura en las costas de Lima y Callao es plástico</strong>. El río Rímac arrastra toneladas de residuos que llegan al mar afectando la fauna marina.</p>
+      </div>
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/7564169/pexels-photo-7564169.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Recicladores informales Perú" loading="lazy">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Reciclaje informal y economía circular</h3>
+        <p>Más de <strong>120,000 recicladores informales</strong> recuperan 300,000 toneladas al año sin equipos ni seguridad social. Iniciativas buscan integrarlos al sistema formal.</p>
+      </div>
+    </div>
+
+    <!-- Realidades en el MUNDO con imagen panorámica -->
+    <div class="info-card world-card img-card">
+      <img class="card-img" src="https://images.pexels.com/photos/7228909/pexels-photo-7228909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vertedero global" loading="lazy">
+      <div class="card-icon" style="background:#d9ebff;"><i class="fas fa-globe"></i></div>
+      <h3><i class="fas fa-earth-americas"></i> Crisis global de residuos: datos duros</h3>
+      <p><strong>El Banco Mundial proyecta que para 2050 la generación de basura aumente un 70%</strong> si no cambiamos hábitos. Hoy el mundo produce más de 2.200 millones de toneladas anuales.</p>
+      <div class="grid-2cols" style="margin-top: 0.8rem;">
+        <div>
+          <ul class="fact-list">
+            <li><strong>🇨🇱 Chile:</strong> solo recicla el 0,6% de sus residuos plásticos.</li>
+            <li><strong>🇲🇽 México:</strong> recicla apenas el 4% de sus desechos totales.</li>
+            <li><strong>🇪🇸 España:</strong> recicla el 36% de envases domésticos, pero el 40% acaba en vertedero.</li>
+            <li><strong>🇺🇸 EE.UU.:</strong> 951 kg de residuos por persona/año, recicla solo el 30%.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="fact-list">
+            <li><strong>🇩🇪 Alemania:</strong> líder mundial con 67% de reciclaje.</li>
+            <li><strong>🇰🇷 Corea del Sur:</strong> 54% de reciclaje gracias a sistemas de pago por generación.</li>
+            <li><strong>🇯🇵 Japón:</strong> 84% de las botellas PET se reciclan.</li>
+            <li><strong>🇫🇮 Finlandia:</strong> 9 de cada 10 botellas vuelven al sistema con devolución.</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="stat-highlight">
-      <i class="fas fa-recycle"></i> <strong>Hábito clave:</strong> Infórmate sobre los códigos de colores de tu municipio (azul: papel/cartón; amarillo: plásticos y metales; verde: vidrio; marrón: orgánico). Pequeños gestos, gran impacto.
-    </div>
-  </div>
-
-  <!-- Contenido: REALIDADES -->
-  <div id="realidades" class="tab-content">
-    <div class="info-card">
-      <div class="card-icon"><i class="fas fa-chart-simple"></i></div>
-      <h3>Solo el 6,9% de la economía es circular</h3>
-      <p>Según el <strong>Circularity Gap Report 2025</strong>, el grado de circularidad mundial ha caído al 6,9% (fue 9,1% en 2018). Cada vez extraemos más materiales vírgenes y el reciclado no sigue el ritmo del consumo [citation:1].</p>
+      <i class="fas fa-chart-pie"></i> <strong>Impacto global:</strong> Solo el 9% de todo el plástico producido en la historia se ha reciclado. El 79% está en vertederos o en el medio ambiente. ¡Actuar es urgente! (Fuente: ONU Medio Ambiente, 2025)
     </div>
     <div class="grid-2cols">
-      <div class="info-card">
-        <h3><i class="fas fa-trash-alt"></i> Países que más generan residuos</h3>
-        <p><span class="badge-stats">1°</span> <strong>Estados Unidos:</strong> 951 kg por persona/año (solo recicla 30%)<br>
-        <span class="badge-stats">2°</span> <strong>Israel:</strong> 650 kg/persona, 80% termina en vertedero<br>
-        <span class="badge-stats">3°</span> <strong>Chile:</strong> 437 kg/persona, reciclaje prácticamente nulo (0%) [citation:6][citation:8].</p>
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/6714666/pexels-photo-6714666.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Economía circular" loading="lazy">
+        <h3><i class="fas fa-building"></i> Economía circular en cifras</h3>
+        <p>La circularidad mundial ha caído al <strong>6,9%</strong> (Circularity Gap Report 2025). Se extraen más materiales vírgenes que nunca. Por cada empleo en vertederos, el reciclaje genera 6 puestos de trabajo formales.</p>
       </div>
-      <div class="info-card">
-        <h3><i class="fas fa-chart-line"></i> México: solo recicla el 4%</h3>
-        <p>El Global Waste Index 2025 coloca a México en el puesto 31 de 38, con apenas un 4% de reciclaje y alta dependencia de vertederos. Sin un sistema nacional de devolución de envases (DRS), el país desperdicia recursos valiosos [citation:8].</p>
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/7408754/pexels-photo-7408754.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plástico en océanos" loading="lazy">
+        <h3><i class="fas fa-fish"></i> Contaminación marina</h3>
+        <p>8 millones de toneladas de plástico acaban en el océano cada año. Para 2050 podría haber más plástico que peces. En el Pacífico sur, las corrientes arrastran microplásticos que afectan la pesca peruana.</p>
       </div>
-    </div>
-    <div class="info-card">
-      <h3><i class="fas fa-industry"></i> Realidad económica del reciclaje en España</h3>
-      <p>En 2025, la facturación del sector de reciclaje alcanzó los <strong>5.000 millones de euros</strong>, con 22,2 millones de toneladas recicladas (crecimiento del 2,8%). Los metales concentran el 62,5% del volumen reciclado, seguidos por papel/cartón (20,6%) y plástico (4,5%) [citation:3].</p>
-      <p><strong>Dato:</strong> El reciclaje genera entre 6 y 10 veces más empleo que los vertederos o incineradoras [citation:5].</p>
     </div>
   </div>
 
-  <!-- Contenido: DATOS INTERESANTES -->
+  <!-- ================= DATOS INTERESANTES CON IMÁGENES ================= -->
   <div id="datos" class="tab-content">
     <div class="grid-2cols">
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/7564247/pexels-photo-7564247.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ahorro energético" loading="lazy">
         <div class="card-icon"><i class="fas fa-bolt"></i></div>
-        <h3>Ahorro energético asombroso</h3>
-        <ul class="fact-list">
-          <li>Reciclar una <strong>lata de aluminio</strong> ahorra energía para 3 horas de TV [citation:2].</li>
-          <li>Reciclar <strong>vidrio</strong> ahorra 130 litros de combustible por tonelada [citation:9].</li>
-          <li>El <strong>aluminio</strong> se recicla infinitamente y ahorra un 95% de energía frente a producirlo nuevo [citation:2].</li>
-          <li>Una <strong>botella de plástico</strong> reciclada da energía para mantener una bombilla LED 6 horas [citation:5].</li>
-        </ul>
+        <h3>Ahorro energético</h3>
+        <ul class="fact-list"><li>Reciclar aluminio ahorra 95% de energía.</li><li>Una lata reciclada = energía para 3h de TV.</li><li>Papel reciclado consume 70% menos de electricidad.</li></ul>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4588207/pexels-photo-4588207.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Salvemos árboles" loading="lazy">
         <div class="card-icon"><i class="fas fa-tree"></i></div>
-        <h3>Impacto en bosques y agua</h3>
-        <ul class="fact-list">
-          <li>27.000 árboles se talan CADA DÍA para fabricar papel higiénico [citation:2].</li>
-          <li>Reciclar 1 tonelada de papel salva 13 árboles y ahorra 4.000 kWh [citation:9].</li>
-          <li>El papel reciclado consume un 70% menos de energía y reduce la contaminación del aire [citation:2].</li>
-        </ul>
+        <h3>Salvemos árboles</h3>
+        <ul class="fact-list"><li>1 tonelada de papel reciclado = 17 árboles salvados.</li><li>27.000 árboles se talan cada día para papel higiénico.</li><li>Reciclar cartón reduce la deforestación masiva.</li></ul>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/4167540/pexels-photo-4167540.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Degradación de residuos" loading="lazy">
         <div class="card-icon"><i class="fas fa-clock"></i></div>
-        <h3>Tiempos de degradación (alarmantes)</h3>
-        <ul class="fact-list">
-          <li>Bolsas de plástico: <strong>500 a 1000 años</strong> [citation:2].</li>
-          <li>Pañales desechables: <strong>500-800 años</strong> [citation:5].</li>
-          <li>Colillas de cigarrillo: <strong>12 años</strong> [citation:5].</li>
-          <li>Botella de vidrio: más de <strong>4000 años</strong> en descomponerse [citation:2].</li>
-        </ul>
+        <h3>Tiempos de degradación</h3>
+        <ul class="fact-list"><li>Bolsas plásticas: hasta 1000 años.</li><li>Vidrio: más de 4000 años.</li><li>Colillas: 12 años contaminando el suelo.</li></ul>
       </div>
-      <div class="info-card">
+      <div class="info-card img-card">
+        <img class="card-img" src="https://images.pexels.com/photos/1002077/pexels-photo-1002077.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Récords mundiales reciclaje" loading="lazy">
         <div class="card-icon"><i class="fas fa-globe"></i></div>
-        <h3>Récords mundiales de reciclaje</h3>
-        <ul class="fact-list">
-          <li>Corea del Sur tiene la <strong>tasa de reciclaje más alta del mundo: 54%</strong> [citation:8].</li>
-          <li>Suiza recicla el 52% de sus residuos, y en Finlandia 9 de cada 10 botellas de plástico se devuelven [citation:2].</li>
-          <li>Japón envía solo 3 kg per cápita a vertederos gracias a su eficiente separación [citation:6].</li>
-        </ul>
+        <h3>Récords mundiales</h3>
+        <ul class="fact-list"><li>🇩🇪 Alemania recicla el 67% de residuos urbanos.</li><li>🇨🇭 Suiza: el 52% reciclaje + incineración limpia.</li><li>🇨🇱 Chile: meta de reciclar 50% de plásticos para 2030.</li></ul>
       </div>
     </div>
-    <div class="stat-highlight">
-      <i class="fas fa-microplastic"></i> <strong>Microplásticos:</strong> Ingerimos hasta 5 gramos de plástico a la semana (equivalente a una tarjeta de crédito). Reciclar reduce esta contaminación invisible.
-    </div>
-    <div class="info-card">
-      <h3><i class="fas fa-history"></i> Curiosidad histórica</h3>
-      <p>El primer reciclaje de papel documentado ocurrió en <strong>Japón en 1031 d.C.</strong> Las tiendas de papel (kamiya) vendían "kamiya-gami", papel reciclado de desechos. Y el símbolo internacional del reciclaje (Cinta de Möbius) fue diseñado en 1970 por Gary Anderson para el primer Día de la Tierra [citation:4][citation:7].</p>
+    <div class="stat-highlight"><i class="fas fa-microplastic"></i> <strong>Microplásticos:</strong> ¡Cada semana ingerimos hasta 5 gramos de plástico (el peso de una tarjeta de crédito)! Reciclar es parte de la solución.</div>
+    <div class="info-card img-card">
+      <img class="card-img" src="https://images.pexels.com/photos/8522430/pexels-photo-8522430.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Historia del reciclaje" loading="lazy">
+      <h3><i class="fas fa-history"></i> Dato histórico</h3>
+      <p>El primer reciclaje de papel data del <strong>año 1031 en Japón</strong>. El símbolo universal del reciclaje (Cinta de Möbius) fue diseñado en 1970 por Gary Anderson para el primer Día de la Tierra.</p>
     </div>
   </div>
 
-  <!-- Contenido: FABRICACIÓN (vacío, según solicitud) -->
+  <!-- ================= FABRICACIÓN (VACÍO CON IMAGEN DECORATIVA) ================= -->
   <div id="fabricacion" class="tab-content">
     <div class="empty-fabricacion">
-      <i class="fas fa-drafting-compass"></i>
-      <h3>Sección en blanco</h3>
-      <p>Espacio reservado para contenido sobre fabricación y procesos industriales circulares.<br>Vuelve pronto para descubrir cómo se transforman los residuos en nuevos productos.</p>
+      <img class="empty-img" src="https://cdn-icons-png.flaticon.com/512/2384/2384966.png" alt="Diseño en blanco" loading="lazy">
+      <h3>Contenido en blanco</h3>
+      <p>Esta sección está reservada para información sobre procesos de fabricación sostenible, ecodiseño y producción circular.<br>¡Próximamente más contenido!</p>
+      <i class="fas fa-recycle" style="margin-top: 1rem; opacity: 0.5; font-size: 1.8rem;"></i>
     </div>
   </div>
 
   <footer>
-    <i class="fas fa-recycle"></i> Conciencia ambiental · Datos actualizados 2025-2026 · Fuentes: Circularity Gap Report, Global Waste Index, Ecoembes, Informa DBK, WWF
-    <br><small>Infórmate, actúa y comparte. Cada decisión cuenta.</small>
+    <i class="fas fa-recycle"></i> Fuentes: Ministerio del Ambiente Perú (2025), OEFA, Banco Mundial, Circularity Gap Report 2025, Global Waste Index, ONU Medio Ambiente, Ecoembes. Imágenes con fines educativos.
+    <br><small>Conciencia ambiental · Información verificada para inspirar acción real.</small>
   </footer>
 </div>
 
 <script>
-  // Funcionalidad de pestañas
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = {
+  // Control de pestañas
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = {
     habitos: document.getElementById('habitos'),
     realidades: document.getElementById('realidades'),
     datos: document.getElementById('datos'),
@@ -402,33 +402,22 @@
   };
 
   function activateTab(tabId) {
-    // Ocultar todos los contenidos
-    Object.values(tabContents).forEach(content => {
-      if (content) content.classList.remove('active-content');
-    });
-    // Mostrar el seleccionado
-    if (tabContents[tabId]) {
-      tabContents[tabId].classList.add('active-content');
-    }
-    // Actualizar botones activos
-    tabBtns.forEach(btn => {
+    Object.values(contents).forEach(c => c.classList.remove('active-content'));
+    if (contents[tabId]) contents[tabId].classList.add('active-content');
+    tabs.forEach(btn => {
       const btnTab = btn.getAttribute('data-tab');
-      if (btnTab === tabId) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+      if (btnTab === tabId) btn.classList.add('active');
+      else btn.classList.remove('active');
     });
   }
 
-  tabBtns.forEach(btn => {
+  tabs.forEach(btn => {
     btn.addEventListener('click', () => {
       const tabId = btn.getAttribute('data-tab');
       if (tabId) activateTab(tabId);
     });
   });
-
-  // Asegurar que la pestaña de Hábitos está activa por defecto
+  // hábitos por defecto
   activateTab('habitos');
 </script>
 </body>
